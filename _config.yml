@@ -1,0 +1,18 @@
+title: TickerStrike
+tagline: Stock research management. Build your thesis. Find your moment. Strike.
+description: >-
+  TickerStrike is a stock research management platform for building investment
+  theses, collecting data from disparate sources, backtesting strategies, and
+  finding the right moment to enter a trade.
+url: "https://tickerstrike.com"
+baseurl: ""
+
+markdown: kramdown
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
