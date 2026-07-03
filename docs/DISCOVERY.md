@@ -80,6 +80,22 @@ Reality Check/SPA); "settled science"/"gold standard" softened to
 three-way verdict (edge / no edge / not enough evidence) surfaced; holdout
 exhaustion at product scale flagged publicly as an open problem.
 
+## Round 2.75 — 2026-07-03 (the founder's JTBD, near-verbatim)
+
+Re-messaging the teaser, Michael stated the job to be done directly:
+
+> "Take the burden of keeping on top of tons of stocks and setups and charts
+> and levels and option data and news and influencer mentions/trades and
+> newsletter mentions/trades... a way to synthesize all of that into a trusted
+> setup on tickers to strike at the right time."
+
+Core message hierarchy this implies: **conviction** is the product ("the place
+to build conviction in your setups and ticker ideas"); **burden relief** is the
+mechanism (the platform watches everything so you don't); **the strike** is the
+payoff (right ticker, right time). Edge verification is the trust layer under
+"trusted setup" — supporting, not the headline. Teaser (/) now leads with
+"The right ticker. The right time." + conviction framing.
+
 ## Emerging product spine
 
 **Verify → Conviction → Convergence → Strike.**
