@@ -58,6 +58,28 @@ Not selected: "kills ideas publicly" as a trust signal.
 
 ---
 
+## Round 2.5 — 2026-07-03 (positioning lightbulb)
+
+While building the /why/ page, Michael articulated the gap statement directly:
+**"TradingView and thinkorswim backtesting isn't reliable or easy to do...
+quant frameworks are clunky, hard to learn, onerous, and you have to be an
+expert to use them properly. What we're building bridges the gap."**
+
+Guardrails he set for all public claims: credibility and trustworthiness are
+everything for this product; no outlandish claims; grounded in real, accepted,
+defensible processes; honest about where we are now vs. where we're going;
+transparent where it doesn't hurt the (potential) business. The /why/ page now
+includes a "Where we are, honestly" section (works today / being built / open
+problems) as a deliberate trust device.
+
+Quant-skeptic review findings applied to /why/ (2026-07-03): don't attribute
+the matched-placebo baseline to White/Hansen (cite as lineage, not
+implementation — the engine runs matched placebo + BH FDR + bootstrap CIs, not
+Reality Check/SPA); "settled science"/"gold standard" softened to
+"well accepted"; automation claims moved to future tense; costs mentioned;
+three-way verdict (edge / no edge / not enough evidence) surfaced; holdout
+exhaustion at product scale flagged publicly as an open problem.
+
 ## Emerging product spine
 
 **Verify → Conviction → Convergence → Strike.**
