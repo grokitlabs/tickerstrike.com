@@ -1,0 +1,174 @@
+---
+layout: default
+permalink: /why/
+title: Why TickerStrike?
+description: >-
+  The statistical methods that separate real trading edges from lucky backtests
+  have existed for decades — but only quants and engineers can use them.
+  TickerStrike packages that rigor, on by default, in plain English.
+---
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-kicker">// WHY TICKERSTRIKE</p>
+    <h1>Research-grade rigor,<br><span class="accent">without becoming a quant.</span></h1>
+    <p class="hero-sub">
+      The statistics that separate a real edge from a lucky backtest have been settled science
+      for decades. The problem: today you only get them by writing code and building the
+      safeguards yourself. TickerStrike exists to close that gap — the gold-standard methods,
+      applied automatically, answered in plain English.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
+      <a class="btn btn-ghost" href="#gap">See the gap</a>
+    </div>
+  </div>
+</section>
+
+<section id="mislead" class="section section-alt">
+  <div class="container">
+    <p class="section-kicker">// THE PROBLEM, DOCUMENTED</p>
+    <h2>Why most backtests mislead — including honest ones</h2>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-icon">&#127922;</div>
+        <h3>Try enough, win by luck</h3>
+        <p>Test enough variations of a strategy and one will look great by chance alone. Researchers have shown impressive simulated performance is <em>easily</em> achieved this way — and tends to evaporate out-of-sample.<sup><a href="#ref-1">1</a></sup></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128200;</div>
+        <h3>No fair baseline</h3>
+        <p>"Price bounced after my level" proves little in a rising market — <em>everything</em> bounced. Without comparing against a random comparable trade, market drift masquerades as skill.<sup><a href="#ref-2">2</a></sup></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128302;</div>
+        <h3>Leaking the future</h3>
+        <p>Look-ahead bias — accidentally letting tomorrow's information into today's decision — is one of the most common and subtle backtest errors, and it manufactures edges that never existed.<sup><a href="#ref-3">3</a></sup></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128290;</div>
+        <h3>One seductive number</h3>
+        <p>A single Sharpe ratio or win rate hides how many trials produced it. Properly adjusted for multiple testing, reported performance deserves a haircut — sometimes a severe one.<sup><a href="#ref-4">4</a></sup></p>
+      </div>
+    </div>
+    <p class="pricing-note">None of this requires bad faith. These are failure modes of the <em>process</em>, which is why the safeguards below were invented.</p>
+  </div>
+</section>
+
+<section id="gap" class="section">
+  <div class="container">
+    <p class="section-kicker">// THE LANDSCAPE</p>
+    <h2>Today you choose: accessible, or rigorous</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="card-icon">&#128241;</div>
+        <h3>Accessible tools</h3>
+        <p>Charting platforms and no-code backtesters are excellent at what they aim for: fast, visual strategy testing anyone can use. But the statistical validation — out-of-sample discipline, baselines, significance — is left to the user, and built-in optimizers make it effortless to run the many trials that inflate results.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128187;</div>
+        <h3>Code frameworks</h3>
+        <p>Python and institutional-grade platforms can absolutely do this right — the best even warn about overfitting. But the matched baselines and significance testing are yours to design, implement, and interpret. It's a toolkit for quants and engineers, not a product for traders.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#127891;</div>
+        <h3>Academic methods</h3>
+        <p>The statistics for asking "is this result real, or the luckiest of many tried?" exist and are well accepted — reality-check baselines, superior predictive ability tests, multiple-comparisons control.<sup><a href="#ref-5">5</a></sup> They live in journals and quant shops, not in anything a trader can pick up.</p>
+      </div>
+    </div>
+    <p class="pricing-note"><strong>The gap:</strong> nothing accessible applies the accepted safeguards <em>by default</em>. That's what we're building.</p>
+  </div>
+</section>
+
+<section id="approach" class="section section-alt">
+  <div class="container">
+    <p class="section-kicker">// OUR APPROACH</p>
+    <h2>The gold standard, on by default</h2>
+    <div class="grid grid-4">
+      <div class="card">
+        <div class="card-icon">&#9878;</div>
+        <h3>A matched baseline</h3>
+        <p>Every setup is judged against a random comparable trade — the "reality check" posture pioneered in the data-snooping literature — so drift can't pose as edge.<sup><a href="#ref-5">5</a></sup></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128274;</div>
+        <h3>Locked before the reveal</h3>
+        <p>Rules are committed in writing before out-of-sample data is touched, and the verdict lands on a holdout period never used to build the idea — the discipline the backtesting literature prescribes.<sup><a href="#ref-4">4</a></sup></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128202;</div>
+        <h3>Multiple-testing control</h3>
+        <p>When many variations are tried, the math accounts for it — established false-discovery and stepwise-testing methods, not a leaderboard of lucky winners.<sup><a href="#ref-6">6</a></sup></p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#128172;</div>
+        <h3>Plain-English verdicts</h3>
+        <p>Edge, no edge, or not enough evidence — in reward:risk and win rate, with honest uncertainty ranges instead of one seductive number.</p>
+      </div>
+    </div>
+    <div class="honesty-note">
+      <p><strong>We didn't invent the math — and you should distrust anyone who implies they did.</strong>
+      These methods are decades-old, peer-reviewed, and standard practice in serious quantitative research.
+      What we're building is the packaging: that rigor applied automatically to setups you describe in
+      plain terms, so you benefit from the process without having to be the statistician.</p>
+    </div>
+  </div>
+</section>
+
+<section id="foryou" class="section">
+  <div class="container">
+    <p class="section-kicker">// WHAT IT MEANS FOR YOU</p>
+    <h2>You bring the idea. The rigor is built in.</h2>
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num">01</span>
+        <h3>Describe your setup</h3>
+        <p>Levels, indicators, context — in trader terms, not code.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">02</span>
+        <h3>The safeguards run</h3>
+        <p>Fair baseline, no-lookahead construction, locked rules, holdout data, multiple-testing control — automatically.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">03</span>
+        <h3>Get an honest verdict</h3>
+        <p>Plain reward:risk and win rate, uncertainty included, caveats attached.</p>
+      </li>
+      <li class="step">
+        <span class="step-num">04</span>
+        <h3>Act with proof</h3>
+        <p>Size up on what survives. Retire what doesn't. Either answer saves you money.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="references" class="section section-alt">
+  <div class="container container-narrow">
+    <p class="section-kicker">// SOURCES</p>
+    <h2>The receipts</h2>
+    <ol class="refs">
+      <li id="ref-1">Bailey, Borwein, L&oacute;pez de Prado &amp; Zhu (2014), <a href="https://www.ams.org/notices/201405/rnoti-p458.pdf">&ldquo;Pseudo-Mathematics and Financial Charlatanism: The Effects of Backtest Overfitting on Out-of-Sample Performance,&rdquo;</a> <em>Notices of the American Mathematical Society</em> 61(5).</li>
+      <li id="ref-2">The matched-baseline question — does a setup beat a <em>random</em> comparable trade? — is the core of the data-snooping literature; see White (2000)<sup><a href="#ref-5">5</a></sup> and, on robust objectives against overfit, <a href="https://arxiv.org/abs/2602.00080">arXiv:2602.00080</a>.</li>
+      <li id="ref-3">On look-ahead bias as a pervasive backtest failure: <a href="https://arxiv.org/abs/2605.24564">arXiv:2605.24564</a>; on engine/implementation variance as a second, independent error source: <a href="https://arxiv.org/abs/2603.20319">arXiv:2603.20319</a> (preprints).</li>
+      <li id="ref-4">Harvey &amp; Liu (2015), <a href="https://people.duke.edu/~charvey/Research/Published_Papers/P120_Backtesting.PDF">&ldquo;Backtesting,&rdquo;</a> <em>Journal of Portfolio Management</em> 42(1) — multiple-testing haircuts for reported Sharpe ratios and out-of-sample discipline; see also Harvey &amp; Liu, <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2474755">&ldquo;Evaluating Trading Strategies.&rdquo;</a></li>
+      <li id="ref-5">White (2000), &ldquo;A Reality Check for Data Snooping,&rdquo; <em>Econometrica</em> 68(5); Hansen (2005), &ldquo;A Test for Superior Predictive Ability,&rdquo; <em>Journal of Business &amp; Economic Statistics</em> 23(4).</li>
+      <li id="ref-6">Romano &amp; Wolf (2005), &ldquo;Stepwise Multiple Testing as Formalized Data Snooping,&rdquo; <em>Econometrica</em> 73(4); Benjamini &amp; Hochberg (1995), &ldquo;Controlling the False Discovery Rate,&rdquo; <em>Journal of the Royal Statistical Society B</em> 57(1).</li>
+    </ol>
+    <p class="refs-note">Claims about tool categories describe common defaults, not any specific product; capabilities vary and evolve. Last reviewed July 2026.</p>
+  </div>
+</section>
+
+<section id="waitlist" class="section section-cta">
+  <div class="container container-narrow center">
+    <h2>Benefit from the rigor.<br>Skip the PhD.</h2>
+    <p class="hero-sub">Join the waitlist for early access and early-bird pricing.</p>
+    <!-- TODO: replace YOUR_FORM_ID with your real Formspree form ID (formspree.io) -->
+    <form class="waitlist-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Join waitlist</button>
+    </form>
+    <p class="form-note">No spam. One email when your access is ready.</p>
+  </div>
+</section>
