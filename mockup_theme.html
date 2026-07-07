@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TickerStrike — HOME v2 · Big Board default theme</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&family=Michroma&family=VT323&display=swap" rel="stylesheet">
+<!-- The actual theme package — this mockup adds only page-specific layout below.
+     Swapping skins = swapping this one file (token pack), per BRAND_DIRECTION. -->
+<link rel="stylesheet" href="../theme/tickerstrike-theme.css">
+<script src="../theme/tickerstrike-theme.js" defer></script>
+<style>
+/* mockup-only annotations */
+.annot{background:rgba(232,194,104,.06);border:1px dashed #6b5b2a;padding:12px 16px;margin:12px 0 24px;font:400 12.5px var(--ts-font-prose);color:var(--ts-warn)}
+.annot:before{content:"WHY — ";font:700 10px var(--ts-font-mono);letter-spacing:.12em}
+.mock-note{background:var(--ts-warn);color:#221a00;font:600 12px var(--ts-font-prose);padding:6px 16px;text-align:center}
+/* page-specific layout, tokens only */
+.home-grid{display:grid;grid-template-columns:2.1fr 1fr;gap:14px;align-items:start}
+.brief-item{display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid var(--ts-line);padding:11px 0}
+.brief-item:last-child{border-bottom:none}
+.brief-item .pri{font:700 11px var(--ts-font-mono);width:34px;flex-shrink:0;text-align:center;padding-top:2px}
+.brief-item .body{flex:1}
+.brief-item .h{font:600 12.5px var(--ts-font-mono);color:var(--ts-text)}
+.brief-item .s{font:400 12px var(--ts-font-prose);color:var(--ts-dim);margin-top:2px}
+.brief-item .act{flex-shrink:0}
+table.board{width:100%;border-collapse:collapse}
+table.board th{font:600 9px var(--ts-font-mono);letter-spacing:.12em;color:var(--ts-dimmer);text-align:left;padding:6px 8px;border-bottom:1px solid var(--ts-line-bright);text-transform:uppercase}
+table.board td{padding:9px 8px;border-bottom:1px solid var(--ts-line);font-size:12.5px;vertical-align:top;color:var(--ts-dim)}
+table.board td b{color:var(--ts-text)}
+table.board tr.hotrow{background:rgba(64,156,255,.05)}
+.scon{display:inline-flex;gap:2px}
+.scon i{width:9px;height:14px;background:var(--ts-panel-2);border:1px solid var(--ts-line)}
+.scon i.on{background:var(--ts-cmd);border-color:var(--ts-cmd);box-shadow:0 0 8px var(--ts-cmd-glow)}
+.scon i.on.w{background:var(--ts-warn);border-color:var(--ts-warn);box-shadow:none}
+.oper{display:flex;gap:10px;align-items:flex-start;border-bottom:1px solid var(--ts-line);padding:10px 0}
+.oper:last-child{border-bottom:none}
+.oper .av{width:26px;height:26px;border:1px solid var(--ts-line-bright);color:var(--ts-cmd-bright);display:flex;align-items:center;justify-content:center;font:700 11px var(--ts-font-mono);flex-shrink:0}
+.oper .h{font:600 11.5px var(--ts-font-mono);color:var(--ts-text)}
+.oper .s{font:400 11.5px var(--ts-font-prose);color:var(--ts-dim)}
+.mystats{display:flex;text-align:center;border:1px solid var(--ts-line);margin-top:10px}
+.mystats>div{flex:1;padding:9px 2px}
+.mystats>div+div{border-left:1px solid var(--ts-line)}
+.mystats b{font:600 14px var(--ts-font-mono);color:var(--ts-text)}
+.mystats .l{font:600 8px var(--ts-font-mono);color:var(--ts-dimmer);letter-spacing:.08em}
+.theme-row{display:flex;gap:10px;align-items:center;border-bottom:1px solid var(--ts-line);padding:9px 0}
+.theme-row:last-child{border-bottom:none}
+.theme-row .heat{width:54px;flex-shrink:0}
+.theme-row .heat .bar{height:7px;background:var(--ts-panel-2)}
+.theme-row .heat .bar i{display:block;height:100%}
+.theme-row .h{font:600 11.5px var(--ts-font-mono);color:var(--ts-text)}
+.theme-row .s{font:400 11.5px var(--ts-font-prose);color:var(--ts-dim)}
+.section-note{font:400 11px var(--ts-font-prose);color:var(--ts-dimmer);margin-top:6px}
+.delta{font:600 10px var(--ts-font-mono)}
+</style>
+</head>
+<body class="ts-app">
+<div class="mock-note">HOME v2 — REBUILT ON THE DEFAULT "BIG BOARD" THEME (theme/tickerstrike-theme.css, unmodified) · blue = command, green = the machine speaks, red reserved · supersedes mockup_warroom_home.html</div>
+<div class="ts-shell">
+
+  <aside class="ts-sidebar">
+    <div class="ts-brand">
+      <span class="ts-logo--board">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="1" x2="12" y2="6" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="18" x2="12" y2="23" stroke="currentColor" stroke-width="1.5"/><line x1="1" y1="12" x2="6" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="18" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="2.5" fill="currentColor"/></svg>
+        <span>Ticker<span class="ts-brand-accent">Strike</span></span>
+      </span>
+      <span class="ts-logo--sim">TICKERSTRIKE<span class="ts-cursor">▊</span></span>
+    </div>
+    <nav class="ts-nav">
+      <a href="#" class="is-active">▦ THE BOARD</a>
+      <a href="#">◎ SCOPE</a>
+      <a href="#">▤ DOSSIERS</a>
+      <a href="#">✎ LEDGER</a>
+      <a href="#">☰ JOURNAL</a>
+      <div class="ts-nav-sec">Research</div>
+      <a href="#">⚖ SIMULATIONS <span class="ts-chip ts-chip--machine" style="margin-left:auto">AI</span></a>
+      <a href="#">◉ SOURCES</a>
+      <div class="ts-nav-sec">Net</div>
+      <a href="#">⌘ OPERATORS</a>
+    </nav>
+  </aside>
+
+  <main class="ts-main">
+    <div class="ts-statusbar">
+      <div class="ts-strikecon"><span class="ts-strikecon-label">STRIKECON</span><span>1</span><span>2</span><span>3</span><span class="is-on">4</span><span>5</span></div>
+      <span class="ts-lamp ts-lamp--cmd"><i></i>RISK-ON</span>
+      <span class="ts-lamp ts-lamp--warn"><i></i>VOL RISING</span>
+      <span class="ts-lamp ts-lamp--warn"><i></i>2 EDGES DEMOTED BY TAPE</span>
+      <span class="ts-theme-toggle" data-ts-theme-toggle style="margin-left:auto"></span>
+      <span>TUE 07 JUL 2026 · 08:52 ET · PRE-MARKET</span>
+    </div>
+
+    <div class="ts-proj-head">The Board</div>
+    <div class="ts-proj-sub">3 items need a decision · the rest can wait · secretary digested 14 artifacts overnight</div>
+
+    <div class="home-grid">
+      <!-- LEFT -->
+      <div>
+        <div class="ts-eyebrow" style="margin-top:0">Morning brief · ranked by "needs a decision," not recency</div>
+        <div class="ts-panel ts-panel--hot">
+          <div class="brief-item">
+            <div class="pri ts-up">▲1</div>
+            <div class="body">
+              <div class="h">NVDA · STRIKECON 4 → tripwire window closes in 2 days</div>
+              <div class="s">3/5 live · $163.10, 0.8% from your $162.40 activation · thesis intact · <span class="ts-chip ts-chip--machine">SIM: W-LOW +0.14R ✓</span></div>
+            </div>
+            <div class="act"><button class="ts-btn ts-btn--primary" data-ts-toast="> CASE OPENED. PLAN WRITTEN BY CALM-YOU.">REVIEW THE CASE</button></div>
+          </div>
+          <div class="brief-item">
+            <div class="pri ts-warn">▲2</div>
+            <div class="body">
+              <div class="h">XOM · thesis WEAKENED overnight</div>
+              <div class="s">Semi Insights flipped neutral + crude broke your $71 shelf · invalidation $69.40 is 1.1% away · auto-drafted update awaits confirm.</div>
+            </div>
+            <div class="act"><button class="ts-btn ts-btn--ghost" data-ts-toast="> THESIS UPDATED. HISTORY KEPT.">CONFIRM UPDATE</button></div>
+          </div>
+          <div class="brief-item">
+            <div class="pri ts-warn">▲3</div>
+            <div class="body">
+              <div class="h">Ledger · 2 claims resolve today</div>
+              <div class="s">AMD "holds $150 through earnings" (conf 60%) resolves at close · MSFT pullback claim expires → scored as no-call.</div>
+            </div>
+            <div class="act"><button class="ts-btn ts-btn--ghost">VIEW LEDGER</button></div>
+          </div>
+          <div class="brief-item">
+            <div class="pri ts-dimmer">—</div>
+            <div class="body">
+              <div class="h ts-dim">Catalysts · earnings: ORCL (held), STZ (watching) · CPI ✓ landed cool</div>
+              <div class="s ts-dimmer">4 lower-priority evidence appends filed to dossiers automatically. Nothing else needs you.</div>
+            </div>
+          </div>
+        </div>
+        <div class="annot">The brief leads with decisions, not news — the sub-header counts them. Secretary work is collapsed to one dim row: visible enough to trust, quiet enough to protect the 5-minute ritual. Doctrine check: brief/actions are blue (command — human decides); the only green on this panel is the machine's verdict chip.</div>
+
+        <div class="ts-eyebrow">Pipeline radar · 12 dossiers</div>
+        <div class="ts-panel" style="padding:12px 16px">
+          <table class="board">
+            <tr><th>Dossier</th><th>Strikecon</th><th>Δ 24h</th><th>Tripwires</th><th>Thesis</th><th>Sim verdict</th><th>Next</th></tr>
+            <tr class="hotrow">
+              <td><b class="ts-up">NVDA</b> <span class="ts-dim">$163.10</span></td>
+              <td><span class="scon"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></td>
+              <td class="delta ts-up">+1 ▲</td>
+              <td>3/5 · <span class="ts-warn">1 fading</span></td>
+              <td class="ts-up">INTACT · 70%</td>
+              <td><span class="ts-chip ts-chip--machine">+0.14R ✓</span></td>
+              <td class="ts-warn">ACTIVATES ≤162.40</td>
+            </tr>
+            <tr>
+              <td><b>AMD</b> <span class="ts-dim">$151.22</span></td>
+              <td><span class="scon"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></td>
+              <td class="delta ts-dim">0</td>
+              <td>2/4</td>
+              <td class="ts-up">INTACT · 60%</td>
+              <td><span class="ts-chip">NOT ENOUGH EVIDENCE</span></td>
+              <td>claim resolves @ close</td>
+            </tr>
+            <tr>
+              <td><b class="ts-warn">XOM</b> <span class="ts-dim">$70.18</span></td>
+              <td><span class="scon"><i class="on w"></i><i class="on w"></i><i></i><i></i><i></i></span></td>
+              <td class="delta ts-danger">−2 ▼</td>
+              <td>1/4</td>
+              <td class="ts-warn">WEAKENED</td>
+              <td><span class="ts-chip">UNTESTED</span></td>
+              <td class="ts-warn">INVALID @ 69.40</td>
+            </tr>
+            <tr>
+              <td><b>MU</b> <span class="ts-dim">$188.40</span></td>
+              <td><span class="scon"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></td>
+              <td class="delta ts-up">+1 ▲</td>
+              <td>2/5 · new: dark pool</td>
+              <td class="ts-up">FORMING</td>
+              <td><span class="ts-chip ts-chip--machine">+0.14R ✓</span></td>
+              <td>watching 182 shelf</td>
+            </tr>
+            <tr><td colspan="7" class="ts-dimmer" style="text-align:center;padding:8px">▸ 8 more at STRIKECON 1–2 · quiet · expand</td></tr>
+          </table>
+        </div>
+        <div class="annot">Every column is a different surface reporting in: STRIKECON (pipeline), Δ24h (what moved overnight), tripwires + decay (CRM), thesis (Ledger), verdict (machine — the ONLY green column), next event. Red appears once, as a delta warning — never P&amp;L decoration. Quiet dossiers collapse: the board shows heat, not inventory.</div>
+
+        <div class="ts-eyebrow">The machine's room · overnight session</div>
+        <div class="ts-crt" data-ts-session>
+          <div class="ts-sessbar"><span class="is-live">● SESSION 0147</span><span>ENGINE v0.4</span><span style="margin-left:auto">FORWARD LOG: 62 DAYS ON-VERDICT</span></div>
+          <div class="ts-voice ts-voice--sm" data-ts-boot="1">&gt; OVERNIGHT: 2 CLAIMS QUEUED FOR RESOLUTION. 1 VERDICT ACCRUED FORWARD DATA.</div>
+          <div class="ts-voice" data-ts-boot="2">&gt; YOUR W-LOW EDGE REMAINS ON-VERDICT. 14 NEW OBSERVATIONS.<span class="ts-cursor">▊</span></div>
+          <div class="ts-cmdrow" data-ts-boot="3" style="align-items:center;gap:24px">
+            <span>
+              <button class="ts-cmdtoken" data-ts-toast="> APPENDIX: MATCHED PLACEBO · CLUSTERED N · NET OF COSTS.">METHODS</button>
+              <button class="ts-cmdtoken" data-ts-toast="> CALIBRATION: 78% AT 80%-CONF. N=52.">MY CALIBRATION</button>
+            </span>
+            <!-- location-aware radar: same markup as any command-deck radar, renders in the machine palette here -->
+            <div class="ts-radar ts-radar--sm" style="margin-left:auto"><span class="ts-radar-sweep"></span><span class="ts-blip" style="top:28%;left:62%"></span><span class="ts-blip ts-blip--far" style="top:58%;left:36%"></span></div>
+          </div>
+        </div>
+        <div class="annot">The Simulations/engine presence on Home is a small CRT strip in machine-green — the terminal treatment stays reserved for the machine speaking, exactly per the theme doctrine, and links down into the full Simulations room.</div>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <div class="ts-eyebrow" style="margin-top:0">Operators net · your circle · process-public, edge-private</div>
+        <div class="ts-panel">
+          <div class="oper">
+            <div class="av">DK</div>
+            <div class="body">
+              <div class="h">Dave struck yesterday <span class="ts-chip ts-chip--cmd">ON-PLAN</span></div>
+              <div class="s">Plan committed 3d prior · honored a −1R stop this morning · ticker visible after close (his setting).</div>
+            </div>
+          </div>
+          <div class="oper">
+            <div class="av">RT</div>
+            <div class="body">
+              <div class="h">Rita: 14-day on-plan streak <span class="ts-chip ts-chip--cmd">RECEIPT</span></div>
+              <div class="s">Calibration 71% on 80%-conf claims (N=41). Discipline profile public — setups are not.</div>
+            </div>
+          </div>
+          <div class="oper">
+            <div class="av ts-warn" style="border-color:#6b5b2a;color:var(--ts-warn)">JM</div>
+            <div class="body">
+              <div class="h ts-warn">Jer: tilt watch, day 2 of rehab</div>
+              <div class="s">3 improvised trades Friday · his self-written cool-down rule is active · circle sees the streak, supportively.</div>
+            </div>
+          </div>
+          <div class="mystats">
+            <div><b class="ts-up">11</b><div class="l">ON-PLAN STREAK</div></div>
+            <div><b>78%</b><div class="l">CALIBRATION · N=52</div></div>
+            <div><b class="ts-warn">−0.4R</b><div class="l">HESITATION · 30D</div></div>
+            <div><b class="ts-up">0</b><div class="l">IMPROVISED · 7D</div></div>
+          </div>
+        </div>
+        <div class="annot">Receipts, never signals: discipline shown (on-plan %, streaks, calibration), tickers after-close and per-member, setups never. Tilt rehab = witnessed recovery. Guardrails: SOCIAL_ACCOUNTABILITY.md.</div>
+
+        <div class="ts-eyebrow">Themes radar · where your sources cluster</div>
+        <div class="ts-panel">
+          <div class="theme-row">
+            <div class="heat"><div class="bar"><i style="width:88%;background:var(--ts-cmd)"></i></div></div>
+            <div class="body" style="flex:1">
+              <div class="h">SEMIS / AI CAPEX <span class="ts-chip ts-chip--cmd" style="margin-left:4px">4 SOURCES · 3 FRESH</span></div>
+              <div class="s">Semi Insights, @semicap_alpha +2 converging on memory names · overlaps NVDA, MU dossiers</div>
+            </div>
+            <button class="ts-btn ts-btn--sm ts-btn--ghost">IDEAS 5</button>
+          </div>
+          <div class="theme-row">
+            <div class="heat"><div class="bar"><i style="width:54%;background:var(--ts-cmd);opacity:.65"></i></div></div>
+            <div class="body" style="flex:1">
+              <div class="h">GRID / POWER <span class="ts-chip" style="margin-left:4px">2 SOURCES</span></div>
+              <div class="s">Energy Letter initiated VRT-adjacent basket · no dossier yet — open one?</div>
+            </div>
+            <button class="ts-btn ts-btn--sm ts-btn--ghost">IDEAS 2</button>
+          </div>
+          <div class="theme-row">
+            <div class="heat"><div class="bar"><i style="width:30%;background:var(--ts-warn);opacity:.8"></i></div></div>
+            <div class="body" style="flex:1">
+              <div class="h ts-warn">ENERGY <span class="ts-chip ts-chip--warn" style="margin-left:4px">COOLING</span></div>
+              <div class="s">Source flow fading 3 weeks · your XOM weakening is consistent, not contrarian</div>
+            </div>
+            <span class="ts-dimmer" style="font-size:11px">—</span>
+          </div>
+          <div class="section-note">Ranked by fresh-mention density across YOUR followed sources (credibility-weighted, decay-aware) — never global trending, never platform picks. CTA is always "open a dossier."</div>
+        </div>
+        <div class="annot">The "market overview / ideas" ask kept on-strategy: themes emerge from the user's roster; overlap with existing dossiers is surfaced; red line intact.</div>
+      </div>
+    </div>
+
+    <p class="ts-dimmer" style="font-size:10.5px;margin-top:20px">Built on theme/tickerstrike-theme.css + .js unmodified — page adds layout CSS only, all colors via tokens. Use the toggle in the statusbar to flip skins live: BIG BOARD (default mix: blue command, green machine), BOARD BLUE (all-blue), SIM GREEN / SIM BLUE (full terminal). Logo, chrome, and radars follow the skin and their location automatically; choice persists via localStorage.</p>
+  </main>
+</div>
+</body>
+</html>
